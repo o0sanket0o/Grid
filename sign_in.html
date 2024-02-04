@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Open Sans", sans-serif;
+        }
+        body{
+            background-color:rgb(228, 72, 228);
+        }
+        .main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .box{
+            background-color: white;
+            border-radius: 4px;
+            display: grid;
+            padding: 40px;
+            gap: 20px;
+            width: 35vw;
+        }
+        .begin{
+            line-height: 2rem;
+        }
+        .names{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        #dob{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        .btn{
+            padding: 10px;
+        }
+        .last{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .underline{
+            border: solid white;
+            border-bottom: solid 1px #ccc;
+            width: 90%;
+        }
+        #email,#passwd{
+            width: 95%;
+        }
+        #month,#day,#year{
+            width: 90%;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="box">
+            <div class="part begin">
+                <h2>Create an account</h2>
+                <p class="sign">Already have an account? <a href="#">Sign in</a></p>
+            </div>
+            <div class="part mail">Email address
+                <input type="email" name="mail" class="underline" id="email">
+            </div>
+            <div class="part names">
+                <div class="first">First name
+                    <input type="text" id="fname" class="underline">
+                </div>
+                <div class="second">Last name
+                    <input type="text" id="lname" class="underline">
+                </div>
+            </div>
+            <div class="part pass">Password
+                <input type="password" id="passwd" class="underline">
+            </div>
+            <div class="part dob">Date of birth
+                <div id="dob">
+                    <div class="dates month">Month 
+                        <input type="text" id="mnth" class="underline">
+                    </div>
+                    <div class="dates day">Day
+                        <input type="text" id="day" class="underline">
+                    </div>
+                    <div class="dates year">Year
+                        <input type="text" id="year" class="underline">
+                    </div>
+                </div>
+            </div>
+            <div class="part">By clicking create account, I agree that I have read and accepted the <a href="#">Terms of use</a> and <a href="#">Privacy policy.</a></div>
+            <div class="part last">
+                <button type="button" class="btn btn-primary">Create account</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
